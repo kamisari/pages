@@ -10,6 +10,7 @@ import (
 	"os"
 	"path"
 	"path/filepath"
+	"strings"
 )
 
 // generate docs index
@@ -110,6 +111,7 @@ func main() {
 	case *bytes.Buffer:
 		fmt.Printf("%s\n", rw)
 	case *os.File:
+		fmt.Printf("found links:\n\t%s\n", strings.Join(items, "\n\t"))
 		fmt.Printf("writed :[%s]\n", t.Name())
 	}
 }
