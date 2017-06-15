@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>margin</title>
+  <style>
+    body { background: black; color: white; }
+    .marlev1 { margin: 1em; background: #007070; }
+    .marlev2 { margin: 2em; background: #007070; }
+    .marlev3 { margin: 3em; background: #007070; }
+    .marlev4 { margin: 4em; background: #007070; }
+    .marlev5 { margin: 5em; background: #007070; }
+    .marlev6 { margin: 6em; background: #007070; }
+
+    .auto { margin: auto; background: #007070; }
+
+    .padlev1 { padding: 1em; background: #007070; margin: 1em; }
+    .padlev2 { padding: 2em; background: #007070; margin: 1em; }
+    .padlev3 { padding: 3em; background: #007070; margin: 1em; }
+    .padlev4 { padding: 4em; background: #007070; margin: 1em; }
+    .padlev5 { padding: 5em; background: #007070; margin: 1em; }
+    .padlev6 { padding: 6em; background: #007070; margin: 1em; }
+
+    .bottomless { margin: 6em 6em 0em 6em; background: #007070; padding: 1em; }
+    .topless { margin: 0em 6em 6em 6em; background: #007070; padding: 1em; }
+
+    .bottomless2 { margin: 6em; margin-bottom: 0em; background: #007070; padding: 1em; }
+    .topless2 { margin: 6em; margin-top: 0em; background: #007070; padding: 1em; }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>margin</h1>
+    no margin
+    <div class="marlev1">margin 1 em</div>
+    <div class="marlev2">margin 2 em</div>
+    <div class="marlev3">margin 3 em</div>
+    <div class="marlev4">margin 4 em</div>
+    <div class="marlev5">margin 5 em</div>
+    <div class="marlev6">margin 6 em</div>
+  </div>
+  <div>
+    <h1>auto</h1>
+    <div class="auto">auto margin</div>
+  </div>
+  <div>
+    <h1>padding</h1>
+    <div class="padlev1">padding 1 em</div>
+    <div class="padlev2">padding 2 em</div>
+    <div class="padlev3">padding 3 em</div>
+    <div class="padlev4">padding 4 em</div>
+    <div class="padlev5">padding 5 em</div>
+    <div class="padlev6">padding 6 em</div>
+  </div>
+  <div>
+    <h1>margin join</h1>
+    <div class="bottomless">bottomless</div>
+    <div class="topless">topless</div>
+
+    <div class="bottomless2">bottomless2</div>
+    <div class="topless2">topless2</div>
+  </div>
+</body>
+</html>
