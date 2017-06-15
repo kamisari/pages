@@ -82,11 +82,6 @@ func main() {
 		log.Fatalf("invalid argument: %+v", flag.Args())
 	}
 
-	items, err := crawlDocs(root)
-	if err != nil {
-		log.Fatal(err)
-	}
-
 	var rw interface {
 		io.Writer
 		io.Reader
@@ -104,9 +99,16 @@ func main() {
 		rw = buf
 		log.Println("write to temporary buffer")
 	}
+
+	items, err := crawlDocs(root)
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	if err := writeIndex(rw, items); err != nil {
 		log.Fatal(err)
 	}
+
 	switch t := rw.(type) {
 	case *bytes.Buffer:
 		fmt.Printf("%s\n", rw)
