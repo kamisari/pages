@@ -1,0 +1,36 @@
+body {
+  background: black;
+  color: white;
+}
+
+div {
+  font-size: 2em;
+  margin: 1em;
+  padding: 1em;
+  box-shadow: 0 0 1em teal;
+}
+
+.use-class {
+  text-decoration: underline;
+  background: white; color: black;
+}
+
+#use-id {
+  background: lightgreen; color: black;
+}
+
+del[datetime] {
+  background: gray;
+}
+
+del[datetime="2017-06-5T08:28:19 +0900"] {
+  color: blue;
+}
+
+del[datetime^="2017-06-1"] {
+  color: green;
+}
+
+del:hover {
+  background: black; color: teal;
+}

@@ -26,6 +26,19 @@
 
     .bottomless2 { margin: 6em; margin-bottom: 0em; background: #007070; padding: 1em; }
     .topless2 { margin: 6em; margin-top: 0em; background: #007070; padding: 1em; }
+
+    .trim {
+      padding: 1em;
+      background: #007070;
+      margin: 1em;
+      width: max-content; /* experiment */
+    }
+    .trim_specify {
+      padding: 1em;
+      background: #007070;
+      margin: 1em;
+      margin-right: 80%;
+    }
   </style>
 </head>
 <body>
@@ -59,6 +72,13 @@
 
     <div class="bottomless2">bottomless2</div>
     <div class="topless2">topless2</div>
+  </div>
+
+  <div>
+    <h1>trim margin</h1>
+    <div class="trim">trim margin</div>
+    <div class="trim">test</div>
+    <div class="trim_specify">trim specify</div>
   </div>
 </body>
 </html>
