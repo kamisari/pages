@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>form</title>
+  <style>
+    div {
+      margin: 1em; padding: 1em;
+      box-shadow: 0 0 0 1px teal;
+    }
+    .info {
+      font-size: 2em;
+      box-shadow: inherit;
+    }
+  </style>
+</head>
+<body>
+  <!-- go run server.go -->
+
+  <div class="info">
+    <p>send target is [http://localhost:8080]</p>
+    <p>use go run ./server.go</p>
+  </div>
+
+  <div>
+    <h1>post</h1>
+    <form action="http://localhost:8080" method="post">
+      key1<input name="key" value="hello" type="text">
+      key2<input name="key2" value="post" type="text">
+      <button>send post request with value</button>
+    </form>
+  </div>
+
+  <div>
+    <h1>get</h1>
+    <form action="http://localhost:8080" method="get">
+      key1<input name="key" value="hello" type="text">
+      key2<input name="key2" value="get" type="text">
+      <button>send get request with value</button>
+    </form>
+  </div>
+</body>
+</html>
