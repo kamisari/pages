@@ -7,11 +7,11 @@ import (
 
 func main() {
 	handler := func(w http.ResponseWriter, r *http.Request) {
-		log.Println("req.URL: ", r.RequestURI)
-		log.Println("form[key]: ", r.FormValue("key"))
-		log.Println("form[key2]: ", r.FormValue("key2"))
-		if s := r.FormValue("text"); s != "" {
-			log.Printf("from [text]:%s\n", s)
+		log.Printf("req.URL: %s\n", r.RequestURI)
+		for _, s := range []string{"key1", "key2", "text"} {
+			if content := r.FormValue(s); content != "" {
+				log.Printf("form[%s]: %s\n", s, content)
+			}
 		}
 	}
 	http.HandleFunc("/", handler)
