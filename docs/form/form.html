@@ -12,6 +12,7 @@
       font-size: 2em;
       box-shadow: inherit;
     }
+    .input { box-shadow: inherit; }
   </style>
 </head>
 <body>
@@ -23,8 +24,10 @@
   <div>
     <h1>post</h1>
     <form action="http://localhost:8080" method="post">
-      key1<input name="key" value="hello" type="text">
-      key2<input name="key2" value="post" type="text">
+      <div class="input">
+        <label>key1: <input name="key" value="hello" type="text"></label><br>
+        <label>key2: <input name="key2" value="post" type="text"></label><br>
+      </div>
       <button>send post request with value</button>
     </form>
   </div>
@@ -32,9 +35,19 @@
   <div>
     <h1>get</h1>
     <form action="http://localhost:8080" method="get">
-      key1<input name="key" value="hello" type="text">
-      key2<input name="key2" value="get" type="text">
+      <div class="input">
+        <label>key1: <input name="key" value="hello" type="text"></label><br>
+        <label>key2: <input name="key2" value="get" type="text"></label><br>
+      </div>
       <button>send get request with value</button>
+    </form>
+  </div>
+
+  <div>
+    <h1>textarea</h1>
+    <form action="http://localhost:8080" method="post">
+      <textarea name="text" cols="30" rows="10">can write</textarea>
+      <button>send post with text</button>
     </form>
   </div>
 </body>
