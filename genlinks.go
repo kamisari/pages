@@ -15,7 +15,7 @@ import (
 
 // generate docs index
 
-const indexHTML = `
+const IndexHTML = `
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,14 +32,16 @@ const indexHTML = `
 </html>
 `
 
+type Tmpl struct {
+	Items []string
+}
+
 func writeIndex(w io.Writer, Items []string) error {
-	t, err := template.New("index").Parse(indexHTML)
+	t, err := template.New("index").Parse(IndexHTML)
 	if err != nil {
 		return err
 	}
-	data := struct {
-		Items []string
-	}{
+	data := Tmpl {
 		Items: Items,
 	}
 	if err := t.Execute(w, data); err != nil {
@@ -94,7 +96,7 @@ func main() {
 		log.Println("write to :", out)
 		rw = f
 	} else {
-		b := make([]byte, 0, len(indexHTML)*2)
+		b := make([]byte, 0, len(IndexHTML)*2)
 		buf := bytes.NewBuffer(b)
 		rw = buf
 		log.Println("write to temporary buffer")
