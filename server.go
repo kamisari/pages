@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"log"
 	"net/http"
 )
@@ -13,6 +14,12 @@ func logging(handler http.Handler) http.Handler {
 }
 
 func main() {
+	port := flag.String("port", "localhost:8080", "listen port")
+	flag.Parse()
+	if flag.NArg() != 0 {
+		log.Fatal("invalid argument:", flag.Args())
+	}
+
 	http.Handle("/", logging(http.FileServer(http.Dir("./docs"))))
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(*port, nil))
 }
