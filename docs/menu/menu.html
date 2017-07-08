@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>menu</title>
+  <style>
+    ul {
+      list-style: none;
+      margin: 0;
+      padding 0;
+    }
+    li {
+      padding: 5px;
+    }
+    .main-menu {
+      position: relative;
+      cursor: pointer;
+    }
+    .main-menu:hover > ul {
+      display: block;
+    }
+    .sub-menu {
+      display: none;
+      position: absolute;
+      left: 80px;
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li class="main-menu">
+      <a href="">submenu 1</a>
+      <ul class="sub-menu">
+        <li>hello 1</li>
+      </ul>
+    </li>
+    <li class="main-menu">
+      <a href="">submenu 2</a>
+      <ul class="sub-menu">
+        <li>hello 2</li>
+      </ul>
+    </li>
+  </ul>
+</body>
+</html>
