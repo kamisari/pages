@@ -1,7 +1,7 @@
 pages
 =====
 step by step  
-https://kamisari.github.io/pages/
+https://yaeshimo.github.io/pages/
 
 
 Update Index
